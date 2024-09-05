@@ -23,4 +23,4 @@ Para contribuir, siga as etapas abaixo:
 2. Crie uma branch para a sua funcionalidade (`git checkout -b feature/nome-da-feature`).
 3. Faça commit das suas alterações (`git commit -m 'Adiciona nova funcionalidade'`).
 4. Faça push para a branch (`git push origin feature/nome-da-feature`).
-5. Abra um Pull Request.
+5. Abra um Pull Request.  
