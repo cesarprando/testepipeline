@@ -5,7 +5,7 @@ on:
     branches:
       - main
   pull_request:
-    branches:
+    branches: 
       - main
 
 jobs:
@@ -28,15 +28,11 @@ jobs:
       - name: Run tests
         run: npm test
 
-    #   - name: Send email notification
-    #     uses: dawidd6/action-send-mail@v3
-    #     with:
-    #       server_address: smtp.gmail.com
-    #       server_port: 587
-    #       username: ${{ secrets.EMAIL_USERNAME }}
-    #       password: ${{ secrets.EMAIL_PASSWORD }}
-    #       subject: CI Pipeline - ${{ github.repository }}
-    #       body: Build ${{ github.run_number }} - ${{ github.workflow }}: ${{ job.status }}
-    #       to: cesarprandosz@gmail.com
+      - name: Install Vercel CLI
+        run: npm i -g vercel
 
-  
+      - name: Deploy to Vercel
+        run: vercel --token ${{ secrets.VERCEL_TOKEN }} --prod
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
