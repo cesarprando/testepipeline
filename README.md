@@ -5,7 +5,7 @@ Este projeto utiliza GitHub Actions para CI/CD.
 ## Estrutura
 
 - `src/`: Código fonte da aplicação.
-- `tests/`: Testes automatizados com NUnit.
+- `tests/`: Testes automatizados com Jest.
 - `.github/workflows/ci.yml`: Pipeline de CI/CD.
 
 ## Como Funciona
